@@ -1,0 +1,16 @@
+<div class="container">
+    <br/>
+    <br/>
+    <br/>
+    <h1> Delete a Material</h1>
+    <select formControlName="van">           
+        <option *ngFor='let item of data' value="{{item._id}}" > {{item.name}}  
+            
+        </option>
+        
+    </select>
+    <br/>
+    <div style="margin-top: 10px;">
+    <button   name="button">delete</button>
+    </div>
+</div>
