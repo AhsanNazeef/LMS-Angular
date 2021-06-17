@@ -12,7 +12,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { DeleteMaterialComponent } from './delete-material/delete-material.component'
 import { AngularFileUploaderModule } from "angular-file-uploader";
 import {HttpClientModule} from '@angular/common/http';
-
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -30,7 +30,9 @@ import {HttpClientModule} from '@angular/common/http';
     MatToolbarModule,
     MatButtonModule,
     AngularFileUploaderModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

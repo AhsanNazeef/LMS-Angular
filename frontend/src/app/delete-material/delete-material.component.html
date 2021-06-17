@@ -3,14 +3,18 @@
     <br/>
     <br/>
     <h1> Delete a Material</h1>
-    <select formControlName="van">           
-        <option *ngFor='let item of data' value="{{item._id}}" > {{item.name}}  
-            
+    <select [(ngModel)]= "selected"  >           
+        <option *ngFor='let item of data' [value]="item._id" > 
+            {{item.name}}
         </option>
-        
     </select>
     <br/>
+
     <div style="margin-top: 10px;">
-    <button   name="button">delete</button>
+        <div>
+            {{variable}}
+        </div>
+    <button (click)="deleteMaterial()" name="button">delete</button>&nbsp;
+    <button (click)="reset()" name="reset">reset</button>
     </div>
 </div>

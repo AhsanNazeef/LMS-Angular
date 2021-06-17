@@ -30,7 +30,7 @@
           <td>{{ i.name }}</td>
   
           <td>{{ i.path }}</td>
-          <td><Button>download</Button></td>
+          <td><Button (click)= "downloadFile(i._id, i.name)" >download</Button></td>
         </tr>
   
       </tbody>

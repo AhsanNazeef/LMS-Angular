@@ -79,17 +79,12 @@ router.route('/download/:id').get((req,res) =>{
     Material.findById(req.params.id)
     .then(material => {
        path =material.path;
-       console.log(path)
+       console.log(path);
+       res.download(path);
     })
     .catch(err => res.status(400).json('Error: ' + err))
     
-    res.sendFile(path, req.params.id, (err) => {
-        if (err) {
-          res.status(500).send({
-            message: "Could not download the file. " + err,
-          });
-        }
-      }); 
+    
 });
 
 
